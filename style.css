@@ -7,12 +7,17 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 body {
   font-size: 16px;
   background-color: var(--Yellow);
   font-family: "Figtree";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .card {
@@ -22,10 +27,36 @@ body {
   border-radius: 20px;
   border: 1px solid var(--Black);
   padding: 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
+}
+
+.card:hover {
+  transform: translate(-1vh, -1vh);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.card:hover .title {
+  color: var(--Yellow);
+}
+
+.card::after {
+  content: "";
+  z-index: -1;
+  background-color: var(--Black);
+  left: 1vh;
+  top: 1vh;
+  height: inherit;
+  width: inherit;
+  border-radius: inherit;
+  position: absolute;
+}
+
+.card:hover::after {
+  background-color: var(--Black);
+  left: 2vh;
+  top: 2vh;
+  z-index: 1;
 }
 
 .illustration {
@@ -64,14 +95,14 @@ body {
 
 .user {
   font-weight: 800;
-  margin-left: 12px;
+  margin-top: 24px;
 }
 
+/* 
 .user::before {
-  content: "";
+  content: url(assets/images/image-avatar.webp);
 }
-
-/* */
+*/
 .attribution {
   font-size: 11px;
   text-align: center;
