@@ -20,6 +20,12 @@ body {
   min-height: 100vh;
 }
 
+/* A FINIR */
+
+/* 
+pseudo selecteur after surpasse la carte donc cela rend illisible
+*/
+
 .card {
   background-color: var(--White);
   width: 384px;
@@ -31,9 +37,9 @@ body {
 }
 
 .card:hover {
+  z-index: 2;
   transform: translate(-1vh, -1vh);
   cursor: pointer;
-  z-index: 2;
 }
 
 .card:hover .title {
@@ -92,6 +98,8 @@ body {
   color: var(--Grey);
   font-weight: 400;
 }
+
+/* Ajouter la photo de profil */
 
 .user {
   font-weight: 800;
