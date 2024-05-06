@@ -20,49 +20,24 @@ body {
   min-height: 100vh;
 }
 
-/* A FINIR */
-
-/* 
-pseudo selecteur after surpasse la carte donc cela rend illisible
-*/
-
 .card {
   background-color: var(--White);
   width: 384px;
   height: 522px;
   border-radius: 20px;
-  border: 1px solid var(--Black);
   padding: 24px;
-  position: absolute;
+  box-shadow: 7px 7px hsl(0, 0%, 7%);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
 }
 
 .card:hover {
-  z-index: 2;
-  transform: translate(-1vh, -1vh);
+  box-shadow: 16px 16px 0 hsl(0, 0%, 7%);
   cursor: pointer;
 }
 
 .card:hover .title {
   color: var(--Yellow);
-}
-
-.card::after {
-  content: "";
-  z-index: -1;
-  background-color: var(--Black);
-  left: 1vh;
-  top: 1vh;
-  height: inherit;
-  width: inherit;
-  border-radius: inherit;
-  position: absolute;
-}
-
-.card:hover::after {
-  background-color: var(--Black);
-  left: 2vh;
-  top: 2vh;
-  z-index: 0;
 }
 
 .illustration {
@@ -99,18 +74,22 @@ pseudo selecteur after surpasse la carte donc cela rend illisible
   font-weight: 400;
 }
 
-/* Ajouter la photo de profil */
-
 .user {
-  font-weight: 800;
-  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  padding-top: 12px;
 }
 
-/* 
-.user::before {
-  content: url(assets/images/image-avatar.webp);
+.user > p {
+  font-weight: 800;
+  padding-left: 12px;
 }
-*/
+
+.user > img {
+  height: 36px;
+  width: 36px;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
