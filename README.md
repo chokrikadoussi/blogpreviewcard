@@ -37,8 +37,7 @@ Users should be able to:
 ### Built with
 
 - CSS pseudo-class (:hover)
-- CSS pseudo-elements (::after)
-- CSS inherit features for position
+- CSS shadow box
 
 ### What I learned
 
@@ -53,6 +52,8 @@ I tried to use the pseudo-elements ::before and ::after in my code :
 I don't understand why the ::after element, when we hovered the card, passes in front of it. I tried to change the z-index value (from negative to positive) but the issue is still present. In the best case, the ::after element is between the card and its content :
 
 ![](./assets/images/screen-issue.png)
+
+**Issue had been resolved** : Changed the pseudo ::after to a box-shadow feature with a transition
 
 ### Continued development
 
